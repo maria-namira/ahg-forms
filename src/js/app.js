@@ -1,4 +1,4 @@
-import TooltipSwitch from './TooltipSwitch';
+import TooltipSwitch from '/TooltipSwitch';
 
 const tooltipSwitch = new TooltipSwitch();
 
