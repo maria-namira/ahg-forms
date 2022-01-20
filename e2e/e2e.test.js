@@ -23,8 +23,8 @@ describe('Credit Card Validator form', () => {
     });
     browser = await puppetteer.launch({
       /* headless: true,
- slowMo: 100,
- devtools: false, */
+      slowMo: 100,
+      devtools: false, */
     });
     page = await browser.newPage();
   });
@@ -33,29 +33,25 @@ describe('Credit Card Validator form', () => {
     server.kill();
   });
 
-  describe('Форма валидации номеров платежных карт', () => {
+  describe('Кнопка с тултипом', () => {
     test('Открытие основной страницы', async () => {
       await page.goto(baseUrl);
     });
 
-    test('Должен добавить класс bgValid если номер валидный', async () => {
+    test('Должен удалить класс d_none у тултипа при клике', async () => {
       await page.goto(baseUrl);
-      const form = await page.$('.widget__form');
-      const input = await form.$('.input');
-      await input.type('4539499701100246');
-      const submit = await form.$('.button');
-      submit.click();
-      await page.waitForSelector('.input.bgValid');
+      const buttonEl = await page.$('.component__button');
+      const button = await buttonEl.$('.button');
+      button.click();
+      await page.waitForFunction(() => document.body.lastElementChild.classList.length < 3);
     });
 
-    test('Должен добавить класс bgInvalid если номер не валидный', async () => {
+    test('Должен добавить класс d_none у тултипа при клике', async () => {
       await page.goto(baseUrl);
-      const form = await page.$('.widget__form');
-      const input = await form.$('.input');
-      await input.type('4539499701100247');
-      const submit = await form.$('.button');
-      submit.click();
-      await page.waitForSelector('.input.bgInvalid');
+      const buttonEl = await page.$('.component__button');
+      const button = await buttonEl.$('.button');
+      button.click();
+      await page.waitForFunction(() => document.body.lastElementChild.classList.length > 2);
     });
   });
 });
