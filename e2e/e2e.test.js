@@ -25,7 +25,7 @@ describe('Credit Card Validator form', () => {
       headless: true,
       slowMo: 100,
       devtools: false,
- });
+    });
     page = await browser.newPage();
   });
   afterAll(async () => {
