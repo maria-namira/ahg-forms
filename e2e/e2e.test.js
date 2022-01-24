@@ -35,11 +35,11 @@ describe('Credit Card Validator form', () => {
 
   describe('Кнопка с тултипом', () => {
     test('Открытие основной страницы', async () => {
-      await page.goTo(baseUrl);
+      await page.goto(baseUrl);
     });
 
     test('Должен удалить класс d_none у тултипа при клике', async () => {
-      await page.goTo(baseUrl);
+      await page.goto(baseUrl);
       const buttonEl = await page.$('.component__button');
       const button = await buttonEl.$('.button');
       button.click();
@@ -47,7 +47,7 @@ describe('Credit Card Validator form', () => {
     });
 
     test('Должен добавить класс d_none у тултипа при клике', async () => {
-      await page.goTo(baseUrl);
+      await page.goto(baseUrl);
       const buttonEl = await page.$('.component__button');
       const button = await buttonEl.$('.button');
       button.click();
