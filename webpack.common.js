@@ -6,14 +6,13 @@ module.exports = {
   target: 'web',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js',
     publicPath: '',
   },
   module: {
     rules: [
       {
-        test: /\.(js)$/,
-        exclude:  /node_modules/,
+        test: /\.js$/,
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
         },
