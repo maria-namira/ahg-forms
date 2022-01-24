@@ -1,5 +1,5 @@
 {
-  "name": "ahj-5.1-forms",
+  "name": "ahj-4.1-forms",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -20,14 +20,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sergius92739/ahj-5.1-forms.git"
+    "url": "git+https://github.com/maria-namira/ahg-forms.git"
   },
-  "author": "Sergius92739",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Sergius92739/ahj-5.1-forms/issues"
+    "url": "https://github.com/maria-namira/ahg-forms/issues"
   },
-  "homepage": "https://github.com/Sergius92739/ahj-5.1-forms#readme",
+  "homepage": "https://github.com/maria-namira/ahg-forms#readme",
   "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
